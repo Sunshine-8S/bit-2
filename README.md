@@ -16,6 +16,7 @@ También se podrá tener acceso al GitHub de los estudiantes que enviaron el lin
     - HTML
     - CSS
     - JS
+    - Bootstarp
     - Pude aprender a interactuar con las API, en este caso con un formato JSON que el profesor Javi nos compartió.
 
 ---
