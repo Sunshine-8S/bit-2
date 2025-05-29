@@ -53,7 +53,7 @@ function selectedCards(students) {
                             `
                         : cards +=
                             `
-                            <a href="https://github.com/${students[i].usernameGithub}" target="_blank" rel="noopener noreferrer" class="card-link"><img class="github-logo" src="../assets/github-logo.png" alt="Logo de GitHub"></a>
+                            <a href="https://github.com/${students[i].usernameGithub}" target="_blank" rel="noopener noreferrer" class="card-link"><img class="github-logo" src="/assets/github-logo.png" alt="Logo de GitHub"></a>
                         `;
                     let promedioFinal = sumaProyectos / cantidadProyectos;
                     cards +=
