@@ -1,0 +1,113 @@
+:root {
+    --color-amarillo: #e3d095;
+    --color-blanco: white;
+}
+
+/* Etiquetas */
+
+body{
+  font-family: "Funnel Sans", sans-serif;
+  font-weight: 300;
+  background-color: #FAF6E9;
+}
+
+main{
+    padding: 20px;
+}
+
+header {
+    background-color: #0E2148;
+    padding: 8px;
+    position: sticky; /* hace que el header quede fijo */
+    top: 0; /* queda pegado arriba. */
+    z-index: 1000; /* queda por encima de otros elementos. */
+}
+
+/* Grupos */
+
+* , *::before, *::after {
+    box-sizing: border-box;
+}
+
+.navbar-brand, .card-footer, .btn{
+    color: var(--color-blanco);
+}
+
+body, .card-title{
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Header */
+
+.btn{
+    border: solid 1px var(--color-amarillo);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    background-color: var(--color-amarillo);
+}
+
+
+/* Main */
+
+.card-body{
+    padding: 25px;
+}
+
+.card-title{
+    font-family: "Ancizar Serif", serif;
+    font-weight: 900;
+    font-size: 25px;
+    color: #483AA0;
+}
+
+.card-footer{
+    background-color: #0E2148;
+    text-align: center;
+}
+
+.card-img-top{
+    width: 300px;
+    margin: 8px auto;
+    box-shadow: 5px 5px 10px #0E2148;
+}
+
+.github-logo{
+    display: block;
+    margin: 30px auto 0;
+    width: 20%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github-logo:hover{
+    transform: scale(1.1);
+}
+
+/* Media queries */
+
+@media screen and (min-width: 768px) {
+    .card-img-top{
+        width: 90%;
+        border: double;
+        box-shadow: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .card-img-top{
+        width: 300px;
+        box-shadow: 5px 5px 10px #0E2148;
+        border: none;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .card-img-top{
+        width: 350px;
+    }
+}
