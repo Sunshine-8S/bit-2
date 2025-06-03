@@ -7,7 +7,7 @@ const $formSearch = document.getElementById("formSearch");
 let allStudents = [];
 
 function selectedCards(students) {
-    let cards = `<div class="row row-cols-1 row-cols-md-3 g-4">`;
+    let cards = `<div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">`;
     for (let i = 0; i < students.length; i++) {
         let sumaProyectos = 0;
         let cantidadProyectos = 0;
@@ -23,18 +23,23 @@ function selectedCards(students) {
                         <h5 class="card-title">Proyectos</h5>
         `;
                         for (let iP = 0; iP < students[i].projects.length; iP++) {
-                            let projectBit1 = students[i].projects[iP];
-                            let puntaje = projectBit1.score;
+                            let proyectos = students[i].projects[iP];
+                            let puntaje = proyectos.score;
                             let promedio = "";
 
                             if (puntaje.length === 1) {
                                 promedio = puntaje[0];
+
+                                if (proyectos.name === "bit-1") {
+                                    promedio = promedio / 2;
+                                }
+
                                 sumaProyectos += promedio;
                                 cantidadProyectos++;
                             } else {
                                 let suma = 0;
                                 for (let iS = 0; iS < puntaje.length; iS++) {
-                                    suma += projectBit1.score[iS];
+                                    suma += proyectos.score[iS];
                                 }
                                 promedio = (suma * 5) / puntaje.length;
                                 sumaProyectos += promedio;
